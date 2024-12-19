@@ -4,7 +4,7 @@ import re
 import pandas as pd
 import datetime
 
-
+print('hello')
 #뉴스 카테고리
 category = ['Politics', 'Economic', 'Social', 'Culture', 'World', 'IT']
 
