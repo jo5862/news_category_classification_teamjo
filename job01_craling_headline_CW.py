@@ -10,7 +10,7 @@ category = ['Politics', 'Economic', 'Social', 'Culture', 'World', 'IT']
 
 df_titles = pd.DataFrame()
 
-for i in range(6):
+for i in range(3, 5):
     # 네이버 뉴스 기사
     url = 'https://news.naver.com/section/10{}'.format(i)
     resp = requests.get(url)
@@ -37,7 +37,7 @@ print(df_titles.head())
 df_titles.info()
 print(df_titles['category'].value_counts())
 
-df_titles.to_csv('./crawling_data/naver_headline_news_{}.csv'.format(
+df_titles.to_csv('./crawling_data/naver_headline_news_CW_{}.csv'.format(
     #strf -> standard format date
     datetime.datetime.now().strftime('%Y%m%d')), index=False)
 
