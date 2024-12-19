@@ -15,7 +15,7 @@ df_titles = pd.DataFrame()
 #지민 for i in range(3,5):
 #재상 for i in range(5,6):
 
-for i in range(1, 3):
+for i in range(0, 6):
     # 네이버 뉴스 기사
     url = 'https://news.naver.com/section/10{}'.format(i)
     resp = requests.get(url)
