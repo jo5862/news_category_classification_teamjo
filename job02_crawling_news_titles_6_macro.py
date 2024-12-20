@@ -27,7 +27,7 @@ service = ChromeService(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service = service, options = options)
 
 
-for i in range(1,3):                                              # Sub_domain : 100 ~ 105
+for i in range(5,6):                                              # Sub_domain : 100 ~ 105
     url = 'https://news.naver.com/section/10{}'.format(i)
     driver.get(url)
     titles = []                                                 # Create empty list for save headline
@@ -72,7 +72,7 @@ driver.close()                                                  # close browser
 print(df_titles.head())
 df_titles.info()
 print(df_titles['category'].value_counts())
-df_titles.to_csv('./crawling_data/naver_headline_news_exam_economic_social{}.csv'.format(
+df_titles.to_csv('./crawling_data_prt/naver_headline_news_exam_IT{}.csv'.format(
     datetime.datetime.now().strftime('%Y%m%d')), index = False) # Change time format to 'YYYYMMDD'
                                                                 # index = False == 0, 1, 2 default index = False
 
